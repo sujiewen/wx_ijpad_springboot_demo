@@ -1,0 +1,5 @@
+﻿ngrok目录下doc命令
+ngrok -config ngrok.cfg -subdomain 879862385  80
+
+打开shell或cmd，进入ngrok目录，运行 ngrok -config ngrok.cfg -subdomain my-domain 8080 如果运行失败，请更换my-domain为其它字符串，直至连接成功；
+配置微信公众号中的接口地址：http://my-domain.tunnel.qydev.com/wechat/portal （注意my-domain要跟上面的一致，需要符合微信官方的要求）；

@@ -1,0 +1,37 @@
+1,所以接口使用post请求,查询字符串（名称/值对）提交参数的，下面是发送消息格式:
+
+POST /mall/list HTTP/1.1
+Host: 10.0.37.41:8087
+Content-Length: 28
+Postman-Token: b92de7c5-3ec2-7afb-64ea-c9a4e456b58e
+Cache-Control: no-cache
+Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
+
+merchantId=11163&pageIndex=1&pageSize=20&typeId=1
+
+
+2,接口文档是按接口访问路径存放，例如http://xxx/mall/list,就是先创建mall文件夹，然后再创建list文档
+
+
+
+3，接口返回说明：
+
+//{
+//"success":true,//返回结果 true 成功 false 异常
+//"errorCode":0,//异常的错误信息，参考下面具体错误信息
+//"errorMsg":"错误信息"
+//只有返回分页数据才会有下面两个字段
+//"totalPage":0, //总页数
+//"totalElements":0，总条数
+//"data":不同接口返回不同对象，可能数组，也可能字典，也有可能自字符串
+//}
+
+
+boundWx -- 微信账号绑定
+
+boundAddr -- 新建地址

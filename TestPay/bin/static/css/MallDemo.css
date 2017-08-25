@@ -1,0 +1,82 @@
+body {
+    background-image: url("../images/mall/background.png");
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    margin-top: 100px;
+    margin-left: -10px;
+    display: block;
+    width: 150px;
+
+}
+
+.menu li {
+    height: 50px;
+    font-size: 15pt;
+    list-style: none;
+    text-align: left;
+    float: left;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #6790C2;
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 20pt;
+    color: antiquewhite;
+}
+
+.mallList {
+    position: absolute;
+    margin-left: 200px;
+    float: right;
+
+}
+
+.mallDetailed {
+     float: left;
+     margin-left: 10px;
+     width:130px;
+     margin-top:10px;
+     text-align:center;  
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    padding: 0px;
+    margin-top:5px;
+    text-align: center;
+    background-color:#ffffff;
+}
+
+h6 {
+    color: #6B89C0;
+    margin: 8px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    width:100px;
+}
+
+
+.mallLink{
+	width: 130px;
+	text-decoration: none;
+    background-color:#ffffee;
+}
+	

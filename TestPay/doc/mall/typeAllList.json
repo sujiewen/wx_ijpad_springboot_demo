@@ -1,0 +1,74 @@
+// url:http://xxxxx/mall/typeAllList
+// method:post
+// param（查询字符串（名称/值对））
+
+    "merchantId": 门店id,
+
+//返回：
+//{
+//"success":true,//返回结果 true 成功 false 异常
+//"errorCode":0,//异常的错误信息
+//"errorMsg":"错误信息"
+//"data":[ {
+            "id":48,
+            "scratchCardName":"类别名字",
+            "scratchCardType":消费类型('INTOGRALCHANGE','CASHCHANGE','SPORT','WELFARE')",
+            "type":"商品('LOTTERY','COMMODITY','VIRTUAL')",
+            "imgUrl":""类别图片地址",
+            "cardCreateTime":"Apr 1, 2017 5:53:52 PM",
+            "provinceProxyId":省级代理id,
+            "userId":用户id,
+            "listScratchCard":
+            [
+            	类别下有几项商品,参考list.json说明
+            ]
+        }]
+//}
+
+
+返回的数据格式
+
+{
+    "data":[
+        {
+            "id":48,
+            "scratchCardName":"食品",
+            "scratchCardType":"SPORT",
+            "type":"COMMODITY",
+            "imgUrl":"http://localhost:8080/public/uploadImage/merchant11163upload1503051043588.png",
+            "sysOrg":11163,
+            "cardCreateTime":"Apr 1, 2017 5:53:52 PM",
+            "status":"VALID",
+            "provinceProxyId":11163,
+            "userId":10154,
+            "listScratchCard":
+            [
+            	{
+          				"id":3535,
+          				"scratchCardName":"佳乐锭-巧克力味奶片100g",
+          				"scratchCardPrice":280000,
+          				"scratchCardPointPrice":0,
+          				"scratchCardType":"INTOGRALCHANGE",
+          				"type":"COMMODITY",
+          				"imgUrl":"http://106.14.65.69:9003/public/uploadImage/merchant11156upload1491371159275.png",
+          				"discountPrice":0,
+          				"presentPoints":0,
+          				"sysOrg":11230,
+          				"cardCreateTime":"Apr 21, 2017 10:19:11 AM",
+          				"status":"VALID",
+          				"provinceProxyId":11230,
+          				"userId":10202,
+          				"parentId":158,
+          				"productSn":"8004190053299",
+          				"productArea":"意大利",
+          				"unit":"18",
+          				"spec":"100g",
+          				"supplyPrice":142400,
+          				"supplyFull":144900
+        			}							
+            ]
+        }
+    ],
+    "code":"200",
+    "success":false
+}

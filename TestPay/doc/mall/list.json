@@ -1,0 +1,99 @@
+// url:http://xxxxx/mall/list
+// method:post
+// param（查询字符串（名称/值对））
+
+    "merchantId": 门店id,
+    "typeId": ,商品类别id，
+    "pageIndex": 第几页,从1开始，如果传0，就返回所以的数据
+    "pageSize": 每页有几条数据，默认20条
+
+//返回：
+//{
+//"success":true,//返回结果 true 成功 false 异常
+//"errorCode":0,//异常的错误信息
+//"errorMsg":"错误信息"
+//只有返回分页数据才会有下面两个字段
+//"totalPage":0, //总页数
+//"totalElements":0，总条数
+//"data":[{
+            "id":3535,
+            "scratchCardName":"刮刮卡名称",
+            "scratchCardPrice":商品现金价格,
+            "scratchCardPointPrice":商品积分价格,
+            "scratchCardType":"消费类型('INTOGRALCHANGE','CASHCHANGE','SPORT','WELFARE')",
+            "type":"彩票或者商品('LOTTERY','COMMODITY','VIRTUAL')",
+            "imgUrl":"商品图片(http://106.14.65.69:9003/public/uploadImage/merchant11156upload1491371159275.png)",
+            "discountPrice":折扣,
+            "presentPoints":赠送积分,
+            "sysOrg":11230,
+            "cardCreateTime":"Apr 21, 2017 10:19:11 AM",
+            "status":"'VALID','DELETED'",
+            "provinceProxyId":省级代理id,
+            "userId":用户id,
+            "parentId":类型id(产品的类别),
+            "productSn":"8004190053299",
+            "productArea":"产地",
+            "unit":"单位（元还是分）",
+            "spec":"规格",
+            "supplyPrice":供货价（不含税）,
+            "supplyFull":供货价（含税）
+        }]
+//}
+
+
+返回的数据格式
+
+{
+    "totalPage":67,
+    "totalElements":669,
+    "data":[
+        {
+            "id":3535,
+            "scratchCardName":"佳乐锭-巧克力味奶片100g",
+            "scratchCardPrice":280000,
+            "scratchCardPointPrice":0,
+            "scratchCardType":"INTOGRALCHANGE",
+            "type":"COMMODITY",
+            "imgUrl":"http://106.14.65.69:9003/public/uploadImage/merchant11156upload1491371159275.png",
+            "discountPrice":0,
+            "presentPoints":0,
+            "sysOrg":11230,
+            "cardCreateTime":"Apr 21, 2017 10:19:11 AM",
+            "status":"VALID",
+            "provinceProxyId":11230,
+            "userId":10202,
+            "parentId":158,
+            "productSn":"8004190053299",
+            "productArea":"意大利",
+            "unit":"18",
+            "spec":"100g",
+            "supplyPrice":142400,
+            "supplyFull":144900
+        },
+        {
+            "id":3534,
+            "scratchCardName":"佳乐锭-原味奶片100g",
+            "scratchCardPrice":280000,
+            "scratchCardPointPrice":0,
+            "scratchCardType":"INTOGRALCHANGE",
+            "type":"COMMODITY",
+            "imgUrl":"http://106.14.65.69:9003/public/uploadImage/merchant11156upload1491371142796.png",
+            "discountPrice":0,
+            "presentPoints":0,
+            "sysOrg":11230,
+            "cardCreateTime":"Apr 21, 2017 10:19:11 AM",
+            "status":"VALID",
+            "provinceProxyId":11230,
+            "userId":10202,
+            "parentId":158,
+            "productSn":"8008380001732",
+            "productArea":"意大利",
+            "unit":"18",
+            "spec":"100g",
+            "supplyPrice":142400,
+            "supplyFull":144900
+        }
+    ],
+    "code":"200",
+    "success":false
+}

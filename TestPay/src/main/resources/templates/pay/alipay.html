@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝支付</title>
+    <link rel="stylesheet"
+          href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet"
+          href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../css/demos.css">
+</head>
+<body>
+    <header class='demos-header'>
+        <h1 class="demos-title">支付宝支付</h1>
+        <p class='demos-sub-title'>支付宝页面</p>
+    </header>
+    <div class="bd">
+        <div class="page__bd">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">金额(￥)</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" id="money"
+                           placeholder="请输入数字金额,单位分">
+                </div>
+            </div>
+        </div>
+        <div class="weui-btn-area">
+            <a href="javascript:alipay();"
+               class="weui-btn weui-btn_primary">确定支付</a>
+        </div>
+    </div>
+</body>
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="../layer/layer.js"></script>
+<script type="text/javascript" src="../js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+    function alipay() {
+        $.showLoading("正在加载...");
+        var total_fee = $.trim($("#money").val());
+        <!--jquery的post请求-->
+        $.post("/alipay/wappay",
+            {total_fee : total_fee,},
+            function(res){
+            $.hideLoading();
+            if(JSON.parse(res) == 0){
+                alert("支付成功");
+            }else{
+                alert("支付失败")
+            }
+        })
+
+    }
+</script>
+</html>

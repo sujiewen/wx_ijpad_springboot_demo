@@ -1,0 +1,44 @@
+// url:http://xxxxx/mall/typeList
+// method:post
+// param（查询字符串（名称/值对））
+
+    "merchantId": 门店id,
+
+//返回：
+//{
+//"success":true,//返回结果 true 成功 false 异常
+//"errorCode":0,//异常的错误信息
+//"errorMsg":"错误信息"
+//"data":[ {
+            "id":48,
+            "scratchCardName":"类别名字",
+            "scratchCardType":消费类型('INTOGRALCHANGE','CASHCHANGE','SPORT','WELFARE')",
+            "type":"商品('LOTTERY','COMMODITY','VIRTUAL')",
+            "imgUrl":""类别图片地址",
+            "cardCreateTime":"Apr 1, 2017 5:53:52 PM",
+            "provinceProxyId":省级代理id,
+            "userId":用户id,
+        }]
+//}
+
+
+返回的数据格式
+
+{
+    "data":[
+        {
+            "id":48,
+            "scratchCardName":"食品",
+            "scratchCardType":"SPORT",
+            "type":"COMMODITY",
+            "imgUrl":"http://localhost:8080/public/uploadImage/merchant11163upload1503051043588.png",
+            "sysOrg":11163,
+            "cardCreateTime":"Apr 1, 2017 5:53:52 PM",
+            "status":"VALID",
+            "provinceProxyId":11163,
+            "userId":10154,
+        }
+    ],
+    "code":"200",
+    "success":false
+}
